@@ -1,0 +1,29 @@
+{
+  "name": "karl",
+  "version": "0.1.0",
+  "description": "Very fast and simplistic logger that logs to the console.",
+  "main": "./lib/karl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KurtPattyn/karl.git"
+  },
+  "engines": ["node >=0.8.0"],
+  "keywords": [
+    "logging",
+    "log",
+    "karl",
+    "12factor"
+  ],
+  "author": {
+    "name": "Kurt Pattyn",
+    "email": "pattyn.kurt@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KurtPattyn/karl/issues"
+  },
+  "homepage": "https://github.com/KurtPattyn/karl"
+}
