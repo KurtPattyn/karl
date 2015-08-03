@@ -1,8 +1,5 @@
 # karl
-  [![NPM Version][npm-image]][npm-url]
-  [![NPM Downloads][downloads-image]][downloads-url]
-  
-  [![NPM](https://nodei.co/npm/karl.png)](https://npmjs.org/package/karl)
+  [![NPM Package][npm-image]][npm-url]
   
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   
@@ -164,7 +161,5 @@ When such an exception occurs, Karl logs a fatal log message (including stack tr
 
   [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/npm.svg
+[npm-image]: https://badge.fury.io/js/karl.svg
 [npm-url]: https://www.npmjs.com/package/karl
-[downloads-image]: https://img.shields.io/npm/dm/express.svg
-[downloads-url]: https://npmjs.org/package/karl
