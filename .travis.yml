@@ -14,5 +14,10 @@ deploy:
     repo: KurtPattyn/karl
     branch: master
 
+addons:
+  code_climate:
+    repo_token: a5b7451aa9dd5b54e35a08f783e89ccca7a32b9d3ef953f61686bbcea997ed89
+
 script: "npm run-script test-ci"
 after_script: "npm install coveralls && cat ./coverage/lcov.info | coveralls"
+after_script: "npm install codeclimate-test-reporter && codeclimate-test-reporter < ./coverage/lcov.info"

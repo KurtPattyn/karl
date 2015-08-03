@@ -2,6 +2,7 @@
   [![NPM Package][npm-image]][npm-url]
   [![Build Status][travis-image]][travis-url]
   [![Test Coverage][coveralls-image]][coveralls-url]
+  [![Code Climate][codeclimate-image]][codeclimate-url]
   
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   
@@ -169,3 +170,5 @@ When such an exception occurs, Karl logs a fatal log message (including stack tr
 [coveralls-url]: https://coveralls.io/github/KurtPattyn/karl?branch=master
 [travis-image]: https://travis-ci.org/KurtPattyn/karl.svg?branch=master
 [travis-url]: https://travis-ci.org/KurtPattyn/karl
+[codeclimate-image]: https://codeclimate.com/github/KurtPattyn/karl/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/KurtPattyn/karl
