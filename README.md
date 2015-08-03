@@ -1,6 +1,9 @@
 # karl
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
+  
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
-
+  
 Karl is a lightning fast[1] asynchronous logging library with both structured and text based output.
 It follows [the twelve-factor app methodology](http://12factor.net) by only logging to the console.
 Karl has no external dependencies (except for its tests).
@@ -153,3 +156,13 @@ karl.setOptions({ redirectConsole: false });
 ## UncaughtException
 Karl catches any uncaught exception (see [Event 'uncaughtException'](https://nodejs.org/api/process.html#process_event_uncaughtexception)).
 When such an exception occurs, Karl logs a fatal log message (including stack trace) and then gracefully shuts down the process by emitting a `SIGINT` signal.
+
+
+## License
+
+  [MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/dm/localeval.svg
+[npm-url]: https://www.npmjs.com/package/karl
+[downloads-image]: https://img.shields.io/npm/dm/express.svg
+[downloads-url]: https://npmjs.org/package/karl
