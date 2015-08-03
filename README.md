@@ -160,6 +160,7 @@ When such an exception occurs, Karl logs a fatal log message (including stack tr
 ## License
 
   [MIT](LICENSE)
+  [AUTHORS](AUTHORS)
 
 [npm-image]: https://badge.fury.io/js/karl.svg
 [npm-url]: https://www.npmjs.com/package/karl
