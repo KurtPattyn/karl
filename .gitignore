@@ -1,6 +1,1 @@
-*.log
-/test/*.log
-node_modules/
-node_modules/*
-npm-debug.log
-/*.tgz
+node_modules
