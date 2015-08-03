@@ -4,7 +4,7 @@
   "description": "Very fast and simplistic logger that logs to the console.",
   "main": "./lib/karl.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha --require test/support/env --reporter spec --bail --check-leaks test/"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,8 @@
     "node >=0.8.0"
   ],
   "devDependencies": {
-    "bunyan": "^1.4.0"
+    "bunyan": "^1.4.0",
+    "mocha": "^2.2.5"
   },
   "keywords": [
     "logging",
