@@ -3,6 +3,7 @@
 
 Karl is a lightning fast[1] asynchronous logging library with both structured and text based output.
 It follows [the twelve-factor app methodology](http://12factor.net) by only logging to the console.
+Karl has no external dependencies (except for its tests).
 
 *\[1]: Benchmarking (benchmarks/benchmark.js) revealed that Karl was around 10 times faster than Bunyan (both with location information disabled; otherwise all defaults enabled), and that it was around 5 times faster with location information enabled.*  
 *Karl is also about 5 times faster than directly logging to the console with location information disabled, and about 50% faster with location information enabled.*  
@@ -22,6 +23,13 @@ This is certainly the case when we think [microservices](http://microservices.io
 ```bashp
 $ npm install karl
 ```
+
+or
+
+```bashp
+$ npm install karl --production
+```
+for a production only installation (no tests, documentation, ...).
 
 ## Usage
 ``` js
