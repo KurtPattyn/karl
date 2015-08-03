@@ -2,6 +2,8 @@
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
   
+  [![NPM](https://nodei.co/npm/karl.png)](https://npmjs.org/package/karl)
+  
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   
 Karl is a lightning fast[1] asynchronous logging library with both structured and text based output.
