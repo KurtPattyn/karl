@@ -4,7 +4,8 @@
   "description": "Very fast and simplistic logger that logs to the console.",
   "main": "./lib/karl.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha --require test/support/env --reporter spec --bail --check-leaks test/"
+    "test": "node_modules/mocha/bin/mocha --require test/support/env --reporter spec --bail --check-leaks test/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   ],
   "devDependencies": {
     "bunyan": "^1.4.0",
+    "istanbul": "^0.3.17",
     "mocha": "^2.2.5"
   },
   "keywords": [
