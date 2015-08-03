@@ -1,5 +1,6 @@
 # karl
   [![NPM Package][npm-image]][npm-url]
+  [![Build Status](https://travis-ci.org/KurtPattyn/karl.svg?branch=master)](https://travis-ci.org/KurtPattyn/karl)
   
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   

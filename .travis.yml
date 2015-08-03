@@ -1,10 +1,19 @@
 language: node_js
 node_js:
-  - "stable"
-  - "0.12"
-  - "0.11"
-  - "0.10"
+  - stable
+  - '0.12'
+  - '0.11'
+  - '0.10'
 sudo: false
+deploy:
+  provider: npm
+  email: pattyn.kurt@gmail.com
+  api_key:
+    secure: hwQZy8NQ1zYoMRb8Z4WEjuNh9+kRgLQqrRK8QW6tb/D8u7+f0F7dH72j/BrH/gRZtmN/DH0D87gSQCNL3Qs9p6mpQgzsap5D/g69l9JDGRXisL/MjHpPJqYlBI9x55V7G/vNPihmhzvmO8tGi/hPGOnXw6oBJYPJEG3DmCvpgwnBxiLsa9Xioqbb1vEUIgFgDnSdFUFzcw8uNZtsto0m+F5kM4jyJ7hYslPYd9IRAE0TLHe4OetWaBX3yvhgsOj9xPHGpjtVkDJbeMBhmRT7CmWBalOPizsgC29PXISVOIMXJICBVYwspGrn38hU4cELwr9n1NzpmN0o0DVAJoE+ONDwex7Lx9fXcmQmhNVU9b75evKXzHoyWDmMmoHC0Flj9jkJ6ZqfDnhw4NFJBb8dXVmet78v5hscEawm1zKZ+mlNqJJK7ocEMPegUlBz+zs3PHEttKWiyzIg6c3klY9YeZEZFGQrl6C3270pLzbOzmm4Y6MsKpFPceK13+z42CZxzp4xlRUCLCrvYUPU7wz5lvToZyO/fOVilEdY4nMTKhmBrJPJkxxjb3EK77G5jbwhhMFKvcrCzTWf006LTUyuWvIBoeeRqe6xi/oYQ/FQzLD0hPQn39o14lWQhOvdTNfqSrqAUqcouei8xpwIzun2VFIe6f4IiMsw6ankPPCGfYE=
+  on:
+    tags: true
+    repo: KurtPattyn/karl
+    branch: master
 
 script: "npm run-script test-ci"
 after_script: "npm install coveralls && cat ./coverage/lcov.info | coveralls"
