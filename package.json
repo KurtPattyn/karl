@@ -1,6 +1,6 @@
 {
   "name": "karl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Very fast and simplistic logger that logs to the console.",
   "main": "./lib/karl.js",
   "scripts": {
