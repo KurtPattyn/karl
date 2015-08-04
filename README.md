@@ -3,6 +3,8 @@
   [![Build Status][travis-image]][travis-url]
   [![Test Coverage][coveralls-image]][coveralls-url]
   [![Code Climate][codeclimate-image]][codeclimate-url]
+  [![Dependency Status][david-image]][david-url]
+  [![devDependency Status][david-dev-image]][david-dev-url]
   
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   
@@ -199,3 +201,7 @@ $ npm run-script benchmark
 [travis-url]: https://travis-ci.org/KurtPattyn/karl
 [codeclimate-image]: https://codeclimate.com/github/KurtPattyn/karl/badges/gpa.svg
 [codeclimate-url]: https://codeclimate.com/github/KurtPattyn/karl
+[david-image]: https://david-dm.org/kurtpattyn/karl.svg
+[david-url]: https://david-dm.org/kurtpattyn/karl
+[david-dev-image]: https://david-dm.org/kurtpattyn/karl/dev-status.svg
+[david-dev-url]: https://david-dm.org/kurtpattyn/karl#info=devDependencies
