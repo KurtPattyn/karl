@@ -4,7 +4,6 @@ var bunyan = require('bunyan');
 var bunyanLogger = bunyan.createLogger({name: "myapp", src: showLocationInformation});
 
 var karlLogger = require('..');
-var util = require('util');
 
 //karlLogger.setOptions({ includeLocationInformation: false, colorize: false, redirectConsole: true, humanReadable: true, json: false });
 karlLogger.setOptions({
