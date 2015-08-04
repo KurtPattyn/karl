@@ -160,33 +160,6 @@ Karl catches any uncaught exception (see [Event 'uncaughtException'](https://nod
 When such an exception occurs, Karl logs a fatal log message (including stack trace) and then gracefully shuts down the process by emitting a `SIGINT` signal.
 
 
-## Tests
-
-#### Unit Tests
-
-```bashp
-$ npm test
-```
-
-#### Unit Tests with Code Coverage
-
-```bashp
-$ npm run-script test-cov
-```
-
-This will generate a folder `coverage` containing coverage information and a folder coverage/lcov-report` containing an HTML report with the coverage results.
-
-```bashp
-$ npm run-script test-ci
-```
-will create a folder 'coverage' containing `lcov` formatted coverage information to be consumed by a 3rd party coverage analysis tool. This script is typically used on a continuous integration server.
-
-#### Benchmarks
-
-```bashp
-$ npm run-script benchmark
-```
-
 ## License
 
   [MIT](LICENSE)
