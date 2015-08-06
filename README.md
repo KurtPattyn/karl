@@ -82,7 +82,7 @@ Output:
 {"timestamp":"2015-08-02T17:58:41.671Z","level":"INFO","hostName":"<hidden>","process":{"name":"karltest","pid":26632},"message":"You have 3 options.","fileName":"karltest.js","lineNumber":48,"functionName":"<anonymous>"}
 ```
 
-## Customise Formatting
+## Customize Formatting
 The output above is not easy to read for humans.
 Karl provides the option `humanReadable` to make the output easier to digest for human beings.
 
