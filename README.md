@@ -1,5 +1,6 @@
 # karl
   [![NPM Package][npm-image]][npm-url]
+  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
   [![Build Status][travis-image]][travis-url]
   [![Test Coverage][coveralls-image]][coveralls-url]
   [![Code Climate][codeclimate-image]][codeclimate-url]
@@ -168,6 +169,8 @@ When such an exception occurs, Karl logs a fatal log message (including stack tr
 
 [npm-image]: https://badge.fury.io/js/karl.svg
 [npm-url]: https://www.npmjs.com/package/karl
+[npm-downloads-image]: https://img.shields.io/npm/dm/karl.svg?style=flat
+[npm-downloads-url]: https://www.npmjs.org/package/karl
 [coveralls-image]: https://coveralls.io/repos/KurtPattyn/karl/badge.svg?branch=master&service=github
 [coveralls-url]: https://coveralls.io/github/KurtPattyn/karl?branch=master
 [travis-image]: https://travis-ci.org/KurtPattyn/karl.svg?branch=master
