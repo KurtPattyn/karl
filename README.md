@@ -1,4 +1,5 @@
 # karl
+  [![License][license-image]][license-url]
   [![NPM Package][npm-image]][npm-url]
   [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
   [![Build Status][travis-image]][travis-url]
@@ -208,3 +209,5 @@ $ npm run-script benchmark
 [david-url]: https://david-dm.org/kurtpattyn/karl
 [david-dev-image]: https://david-dm.org/kurtpattyn/karl/dev-status.svg
 [david-dev-url]: https://david-dm.org/kurtpattyn/karl#info=devDependencies
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
