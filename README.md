@@ -137,7 +137,7 @@ Output cannot be shown in color as GitHub markdown does not support colored text
 
 ## Customize Information
 By default, Karl logs a `timestamp`, the `log level`, the `hostname`, the `location` from where the log method was called along with the message itself.
-Fetching location information is an expensive operation, making the logging around 4 times slower (20 microseconds vs 5 microseconds per call on my MacBook). Karl provides the 'includeLocationInformation' option to turn location information on or off.
+Fetching location information is an expensive operation, making the logging around 4 times slower (20 microseconds vs 5 microseconds per call on my MacBook). Karl provides the `includeLocationInformation` option to turn location information on or off.
 
 ```javascript
 karl.setOptions({ includeLocationInformation: false }); //turns location information off
