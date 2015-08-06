@@ -175,20 +175,20 @@ $ npm test
 #### Unit Tests with Code Coverage
 
 ```bashp
-$ npm run-script test-cov
+$ npm run test-cov
 ```
 
 This will generate a folder `coverage` containing coverage information and a folder coverage/lcov-report` containing an HTML report with the coverage results.
 
 ```bashp
-$ npm run-script test-ci
+$ npm run test-ci
 ```
 will create a folder 'coverage' containing `lcov` formatted coverage information to be consumed by a 3rd party coverage analysis tool. This script is typically used on a continuous integration server.
 
 #### Benchmarks
 
 ```bashp
-$ npm run-script benchmark
+$ npm run benchmark
 ```
 
 ## License
