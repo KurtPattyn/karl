@@ -191,6 +191,36 @@ will create a folder 'coverage' containing `lcov` formatted coverage information
 $ npm run benchmark
 ```
 
+#### Checkstyle
+
+Executing
+
+```bashp
+$ npm run check-style
+```
+
+will run the `jscs` stylechecker against the code.
+
+#### Static Code Analysis
+
+Executing
+
+```bashp
+$ npm run code-analysis
+```
+
+will run `jshint` to analyse the code.
+
+#### Code Documentation
+
+Executing
+
+```bashp
+$ npm run make-docs
+```
+
+will run `jsdoc` to create documentation.
+
 ## License
 
   [MIT](LICENSE)
