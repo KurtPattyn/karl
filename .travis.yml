@@ -18,7 +18,9 @@ addons:
   code_climate:
     repo_token: a5b7451aa9dd5b54e35a08f783e89ccca7a32b9d3ef953f61686bbcea997ed89
 
-before_script: "npm run checkstyle"
+before_script:
+  - "npm run check-style"
+  - "npm run code-analysis"
 script: "npm run test-ci"
 after_success:
   - "npm install coveralls && cat ./coverage/lcov.info | coveralls"
