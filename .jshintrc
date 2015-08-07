@@ -7,7 +7,7 @@
   "multistr": true, //deprecated, and will be removed in future version of jshint (use jscs instead)
   "curly": true,
   "eqeqeq": true,
-  "forin": false,    //always use hasOwnProperty() within `for in` loops
+  "forin": true,    //always use hasOwnProperty() within `for in` loops
   "futurehostile": true,
   "immed": true,
   "latedef": true,
