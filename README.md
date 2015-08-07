@@ -44,11 +44,11 @@ for a production only installation (no tests, documentation, ...).
 ``` js
   var karl = require('karl');
 
-  karl.debug('Everything looks fine.');
-  karl.info('Need some more info huh?');
-  karl.warn('Didn\'t you forget something?');
-  karl.error('This definitely went bezerk.');
-  karl.fatal('This is the end, my friend!');
+  karl.debug("Everything looks fine.");
+  karl.info("Need some more info huh?");
+  karl.warn("Didn't you forget something?");
+  karl.error("This definitely went bezerk.");
+  karl.fatal("This is the end, my friend!");
 ```
 
 Output:
@@ -88,7 +88,7 @@ Karl provides the option `humanReadable` to make the output easier to digest for
 
 ```javasript
 karl.setOptions({ humanReadable: true });
-karl.info('I like reading log files.');
+karl.info("I like reading log files.");
 ```
 
 Output:
@@ -113,7 +113,7 @@ karl.setOptions({
   humanReadable: true,
   json: false
 });
-karl.info('I like reading log files in plain English.');
+karl.info("I like reading log files in plain English.");
 ```
 
 Output:
@@ -130,8 +130,8 @@ karl.setOptions({
   json: false,
   colorize: true
 });
-karl.error('I like reading log files in red.');
-karl.warning('I like reading log files in yellow.');
+karl.error("I like reading log files in red.");
+karl.warning("I like reading log files in yellow.");
 ```
 Output cannot be shown in color as GitHub markdown does not support colored text.
 
@@ -150,7 +150,7 @@ Location information is included by default and must be disabled explicitly.
 By default Karl redirects all `console` output to its own logger.
 As a consequence, all console messages are decorated with location information and a timestamp.
 
-`console.info('Hi there!)` is exactly the same as `karl.info('Hi there!)`.
+`console.info("Hi there!")` is exactly the same as `karl.info("Hi there!")`.
 The `console.log()` method is redirected to `karl.info()`.
 
 To disable this redirection, set the `redirectConsole` option to `false`.
