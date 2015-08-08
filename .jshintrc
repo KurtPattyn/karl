@@ -1,0 +1,20 @@
+{
+  //ENVIRONMENT
+  "node": true,
+
+  //ENFORCING OPTIONS
+  //These options tell jshint to be more strict about the code.
+  "multistr": true, //deprecated, and will be removed in future version of jshint (use jscs instead)
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,    //always use hasOwnProperty() within `for in` loops
+  "futurehostile": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,    //prohibit use of `arguments.caller` and 'arguments.calle`
+  "nonew": true,    //prohibit use of constructors for side-effects; i.e. always use `new` to create objects
+  "undef": true,    //require all non-global variables to be declared before they are used
+  "strict": true,   //require `use strict` pragma in every file
+  "trailing": true  //prohibit trailing whitespaces
+}

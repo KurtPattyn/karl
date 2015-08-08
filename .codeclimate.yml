@@ -1,0 +1,13 @@
+# Save as .codeclimate.yml (note leading .) in project root directory
+languages:
+  Ruby: false
+  JavaScript: true
+  PHP: false
+  Python: false
+exclude_paths:
+  - "benchmarks",
+  - "test"
+  - "docs"
+  - "node_modules"
+  - "coverage"
+

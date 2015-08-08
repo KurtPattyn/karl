@@ -1,0 +1,106 @@
+{
+  "fileExtensions": [".js"],
+  "excludeFiles": [
+    "test/**",
+    "benchmarks/**",
+    "docs/**",
+    "node_modules/**",
+    "coverage/**"
+  ],
+
+  //RESTRICTIONS:
+
+  //"disallowAnonymousFunctions": false,          //anonymous functions are allowed but discouraged
+  "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
+  "disallowKeywordsOnNewLine": ["else"],          //the `else` keyword cannot be placed on a newline
+  "disallowMultipleLineStrings": true,            //multiline strings are not allowed; use concatenation instead
+  "disallowMultipleSpaces": true,
+  "disallowMultipleVarDecl": true,                //variables must be declared on separated lines; do not use comma like in var a,b;
+  "disallowNewlineBeforeBlockStatements": true,   //the opening curly brace of a block cannot be on a newline
+  "disallowOperatorBeforeLineBreak": ["."],       //the dot operator should not be placed at the end of a line
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceAfterPrefixUnaryOperators": true,
+  "disallowSpaceBeforeComma": true,
+  "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+  "disallowSpaceBeforeSemicolon": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowSpacesInFunctionDeclaration": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInNamedFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideBrackets": true,
+  "disallowSpacesInsideParentheses": true,
+  "disallowTrailingComma": true,
+  "disallowTrailingWhitespace": true,
+
+  //ENFORCEMENTS
+  "maximumLineLength": {
+    "value": 100,
+    "tabSize": 2,
+    "allExcept": ["regex", "comments", "urlComments", "require"]
+  },
+  //"maximumNumberOfLines": 250,                //don't limit number of lines as jscs counts comment lines as well
+  "requireCamelCaseOrUpperCaseIdentifiers": true,
+  "requireCapitalizedConstructors": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireCurlyBraces": true,
+  "requireFunctionDeclarations": true,
+  "requireLineBreakAfterVariableAssignment": true,
+  "requireLineFeedAtFileEnd": true,
+  "requireObjectKeysOnNewLine": true,
+  "requireOperatorBeforeLineBreak": true,
+  "requirePaddingNewLineAfterVariableDeclaration": true,
+  "requirePaddingNewLinesAfterUseStrict": true,
+  "requirePaddingNewLinesBeforeLineComments": { "allExcept": "firstAfterCurly" },
+  "requirePaddingNewLinesInObjects": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireSemicolons": true,
+  "requireSpaceAfterBinaryOperators": true,
+  "requireSpaceBeforeBinaryOperators": true,
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBeforeObjectValues": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpacesInConditionalExpression": true,
+  "requireSpacesInForStatement": true,
+  "safeContextKeyword": ["_this"],
+  "validateAlignedFunctionParameters": true,
+  "validateIndentation": {
+    "value": 2,
+    "allExcept": ["comments", "emptylines"]
+  },
+  "validateLineBreaks": "LF",
+  "validateNewlineAfterArrayElements": {
+    "ignoreBrackets": true
+  },
+  "validateParameterSeparator": ", ",
+  "validateQuoteMarks": {
+    "mark": "\"",
+    "escape": true
+  },
+
+  "jsDoc": {
+    "checkAnnotations": {
+      "preset": "jsdoc3",
+      "extra": {
+        "interface": true,
+        "final": true,
+        "checkParamNames": true,
+        "requireParamTypes": true,
+        "checkRedundantParams": true,
+        "checkReturnTypes": true,
+        "checkRedundantReturns": true,
+        "requireReturnTypes": true,
+        "checkTypes": "strictNativeCase",
+        "checkRedundantAccess": "enforceLeadingUnderscore",
+        "enforceExistence": true,
+        "leadingUnderscoreAccess": true,
+        "requireHyphenBeforeDescription": true,
+        "requireNewlineAfterDescription": true,
+        "requireDescriptionCompleteSentence": true,
+        "requireParamDescription": true
+      }
+    }
+  }
+}

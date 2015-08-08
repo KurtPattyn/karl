@@ -1,4 +1,5 @@
 # karl
+  [![License][license-image]][license-url]
   [![NPM Package][npm-image]][npm-url]
   [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
   [![Build Status][travis-image]][travis-url]
@@ -43,11 +44,11 @@ for a production only installation (no tests, documentation, ...).
 ``` js
   var karl = require('karl');
 
-  karl.debug('Everything looks fine.');
-  karl.info('Need some more info huh?');
-  karl.warn('Didn\'t you forget something?');
-  karl.error('This definitely went bezerk.');
-  karl.fatal('This is the end, my friend!');
+  karl.debug("Everything looks fine.");
+  karl.info("Need some more info huh?");
+  karl.warn("Didn't you forget something?");
+  karl.error("This definitely went bezerk.");
+  karl.fatal("This is the end, my friend!");
 ```
 
 Output:
@@ -81,13 +82,13 @@ Output:
 {"timestamp":"2015-08-02T17:58:41.671Z","level":"INFO","hostName":"<hidden>","process":{"name":"karltest","pid":26632},"message":"You have 3 options.","fileName":"karltest.js","lineNumber":48,"functionName":"<anonymous>"}
 ```
 
-## Customise Formatting
+## Customize Formatting
 The output above is not easy to read for humans.
 Karl provides the option `humanReadable` to make the output easier to digest for human beings.
 
 ```javasript
 karl.setOptions({ humanReadable: true });
-karl.info('I like reading log files.');
+karl.info("I like reading log files.");
 ```
 
 Output:
@@ -112,7 +113,7 @@ karl.setOptions({
   humanReadable: true,
   json: false
 });
-karl.info('I like reading log files in plain English.');
+karl.info("I like reading log files in plain English.");
 ```
 
 Output:
@@ -129,14 +130,14 @@ karl.setOptions({
   json: false,
   colorize: true
 });
-karl.error('I like reading log files in red.');
-karl.warning('I like reading log files in yellow.');
+karl.error("I like reading log files in red.");
+karl.warning("I like reading log files in yellow.");
 ```
 Output cannot be shown in color as GitHub markdown does not support colored text.
 
 ## Customize Information
 By default, Karl logs a `timestamp`, the `log level`, the `hostname`, the `location` from where the log method was called along with the message itself.
-Fetching location information is an expensive operation, making the logging around 4 times slower (20 microseconds vs 5 microseconds per call on my MacBook). Karl provides the 'includeLocationInformation' option to turn location information on or off.
+Fetching location information is an expensive operation, making the logging around 4 times slower (20 microseconds vs 5 microseconds per call on my MacBook). Karl provides the `includeLocationInformation` option to turn location information on or off.
 
 ```javascript
 karl.setOptions({ includeLocationInformation: false }); //turns location information off
@@ -149,7 +150,7 @@ Location information is included by default and must be disabled explicitly.
 By default Karl redirects all `console` output to its own logger.
 As a consequence, all console messages are decorated with location information and a timestamp.
 
-`console.info('Hi there!)` is exactly the same as `karl.info('Hi there!)`.
+`console.info("Hi there!")` is exactly the same as `karl.info("Hi there!")`.
 The `console.log()` method is redirected to `karl.info()`.
 
 To disable this redirection, set the `redirectConsole` option to `false`.
@@ -162,6 +163,63 @@ karl.setOptions({ redirectConsole: false });
 Karl catches any uncaught exception (see [Event 'uncaughtException'](https://nodejs.org/api/process.html#process_event_uncaughtexception)).
 When such an exception occurs, Karl logs a fatal log message (including stack trace) and then gracefully shuts down the process by emitting a `SIGINT` signal.
 
+
+## Tests
+
+#### Unit Tests
+
+```bashp
+$ npm test
+```
+
+#### Unit Tests with Code Coverage
+
+```bashp
+$ npm run test-cov
+```
+
+This will generate a folder `coverage` containing coverage information and a folder coverage/lcov-report` containing an HTML report with the coverage results.
+
+```bashp
+$ npm run test-ci
+```
+will create a folder 'coverage' containing `lcov` formatted coverage information to be consumed by a 3rd party coverage analysis tool. This script is typically used on a continuous integration server.
+
+#### Benchmarks
+
+```bashp
+$ npm run benchmark
+```
+
+#### Checkstyle
+
+Executing
+
+```bashp
+$ npm run check-style
+```
+
+will run the `jscs` stylechecker against the code.
+
+#### Static Code Analysis
+
+Executing
+
+```bashp
+$ npm run code-analysis
+```
+
+will run `jshint` to analyse the code.
+
+#### Code Documentation
+
+Executing
+
+```bashp
+$ npm run make-docs
+```
+
+will run `jsdoc` to create documentation.
 
 ## License
 
@@ -181,3 +239,5 @@ When such an exception occurs, Karl logs a fatal log message (including stack tr
 [david-url]: https://david-dm.org/kurtpattyn/karl
 [david-dev-image]: https://david-dm.org/kurtpattyn/karl/dev-status.svg
 [david-dev-url]: https://david-dm.org/kurtpattyn/karl#info=devDependencies
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
