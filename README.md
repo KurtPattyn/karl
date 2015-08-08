@@ -10,9 +10,6 @@
   
   [![Stories in Ready][waffle-image]][waffle-url]
   
-  
-  [![Throughput Graph][waffle-throughput-image]][waffle-throughput-url]
-  
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   
 Karl is a lightning fast[1] asynchronous logging library with both structured and text based output.
@@ -228,5 +225,3 @@ will run `jsdoc` to create documentation.
 [license-url]: LICENSE
 [waffle-image]: https://badge.waffle.io/KurtPattyn/karl.svg?label=ready&title=Ready
 [waffle-url]: http://waffle.io/KurtPattyn/karl
-[waffle-throughput-image]: https://graphs.waffle.io/KurtPattyn/karl/throughput.svg
-[waffle-throughput-url]: https://waffle.io/KurtPattyn/karl/metrics
