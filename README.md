@@ -9,6 +9,8 @@
   [![devDependency Status][david-dev-image]][david-dev-url]
   
   [![Stories in Ready][waffle-image]][waffle-url]
+  
+  
   [![Throughput Graph][waffle-throughput-image]][waffle-throughput-url]
   
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
