@@ -8,6 +8,11 @@
   [![Dependency Status][david-image]][david-url]
   [![devDependency Status][david-dev-image]][david-dev-url]
   
+  [![Stories in Ready][waffle-image]][waffle-url]
+  
+  
+  [![Throughput Graph][waffle-throughput-image]][waffle-throughput-url]
+  
 ##### Author: [Kurt Pattyn](https://github.com/kurtpattyn).
   
 Karl is a lightning fast[1] asynchronous logging library with both structured and text based output.
@@ -84,33 +89,11 @@ Output:
 
 ## Customize Formatting
 The output above is not easy to read for humans.
-Karl provides the option `humanReadable` to make the output easier to digest for human beings.
-
-```javasript
-karl.setOptions({ humanReadable: true });
-karl.info("I like reading log files.");
-```
-
-Output:
-
-```sh
-{ timestamp: '2015-08-02T18:09:50.334Z',
-  level: 'INFO',
-  hostName: '<hidden>',
-  process: { name: 'karltest', pid: 26792 },
-  message: 'I like reading log files.',
-  fileName: 'karltest.js',
-  lineNumber: 43,
-  functionName: '<anonymous>' }
-```
-
-This output is already better digestable by a human.
 
 Karl can be instructed to output in plain text as well, by setting the `json` option to `false`.
 
 ```javascript
 karl.setOptions({
-  humanReadable: true,
   json: false
 });
 karl.info("I like reading log files in plain English.");
@@ -126,7 +109,6 @@ To make the log output even more human digestable, the output can be colored by 
 
 ```javascript
 karl.setOptions({
-  humanReadable: true,
   json: false,
   colorize: true
 });
@@ -134,6 +116,9 @@ karl.error("I like reading log files in red.");
 karl.warning("I like reading log files in yellow.");
 ```
 Output cannot be shown in color as GitHub markdown does not support colored text.
+
+**Note:** If output will be processed by an external log management tool, it is advized to turn
+coloring *off*.
 
 ## Customize Information
 By default, Karl logs a `timestamp`, the `log level`, the `hostname`, the `location` from where the log method was called along with the message itself.
@@ -241,3 +226,7 @@ will run `jsdoc` to create documentation.
 [david-dev-url]: https://david-dm.org/kurtpattyn/karl#info=devDependencies
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
+[waffle-image]: https://badge.waffle.io/KurtPattyn/karl.svg?label=ready&title=Ready
+[waffle-url]: http://waffle.io/KurtPattyn/karl
+[waffle-throughput-image]: https://graphs.waffle.io/KurtPattyn/karl/throughput.svg
+[waffle-throughput-url]: https://waffle.io/KurtPattyn/karl/metrics
