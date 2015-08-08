@@ -53,7 +53,7 @@ describe('karl', function() {
     });
   });
 
-  describe('setColorOption', function() {
+  describe('.options.colorize', function() {
     it('should output in color', function(done) {
       karl.setOptions({ colorize: true, redirectConsole: false });
       karl.warn('Should be in yellow.');
@@ -79,7 +79,7 @@ describe('karl', function() {
     });
   });
 
-  describe('setLocationOption', function() {
+  describe('.options.includeLocationInformation', function() {
     it('should not contain valid location information', function(done) {
       karl.setOptions({ redirectConsole: false, includeLocationInformation: false });
       karl.warn('Should have no location information.');
@@ -99,15 +99,15 @@ describe('karl', function() {
     });
   });
 
-  describe('humanReadable option on', function() {
-    it('should print multiple lines of json', function(done) {
-      karl.setOptions({ redirectConsole: false, humanReadable: true });
-      karl.info('This should be pretty JSON');
+  describe('.options.json=true', function() {
+    it('should output json on a single line', function(done) {
+      karl.setOptions({ redirectConsole: false, json: true });
+      karl.info('This should be a single-line JSON message');
       setImmediate(function() {
         assert.equal(stack.length, 1);
         assert(util.isString(stack[0]));
         var lines = stack[0].split('\n');
-        assert(lines.length > 1);
+        assert.equal(lines.length, 2);
         done();
       });
     });
