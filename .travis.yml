@@ -18,7 +18,9 @@ addons:
 before_script:
   - npm run check-style
   - npm run code-analysis
-script: npm run test-ci
+script:
+  - npm run test-ci
+  - npm run check-coverage
 after_success:
   - npm install coveralls && cat ./coverage/lcov.info | coveralls
   - npm install codeclimate-test-reporter && codeclimate-test-reporter < ./coverage/lcov.info

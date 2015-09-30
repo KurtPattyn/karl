@@ -7,6 +7,7 @@
     "test": "node_modules/mocha/bin/mocha --require test/support/env --bail --reporter spec --check-leaks test/",
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter spec --check-leaks test/",
+    "check-coverage": "istanbul check-coverage --statements 100 --lines 100 --functions 100 --branches 100",
     "benchmark": "node benchmarks/benchmark",
     "make-docs": "./node_modules/.bin/jsdoc -c jsdoc.conf",
     "check-style": "./node_modules/jscs/bin/jscs .",
