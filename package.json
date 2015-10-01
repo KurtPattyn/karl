@@ -5,9 +5,9 @@
   "main": "./lib/karl.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --harmony --require test/support/env --bail --reporter spec --check-leaks test/",
-    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --harmony --require test/support/env --reporter spec --check-leaks test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --harmony --require test/support/env --reporter spec --check-leaks test/",
-    "check-coverage": "istanbul check-coverage --harmony --statements 100 --lines 100 --functions 100 --branches 100",
+    "test-ci": "node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha --report lcovonly -- --harmony --require test/support/env --reporter spec --check-leaks test/",
+    "test-cov": "node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter spec --check-leaks test/",
+    "check-coverage": "istanbul check-coverage --statements 100 --lines 100 --functions 100 --branches 100",
     "benchmark": "node --harmony benchmarks/benchmark",
     "make-docs": "./node_modules/.bin/jsdoc -c jsdoc.conf",
     "check-style": "./node_modules/jscs/bin/jscs .",
