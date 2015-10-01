@@ -6,6 +6,17 @@ var util = require('util');
 var stdout = process.stdout;
 var oldWriteFunc = stdout.write;
 
+function checkStack(stack, done) {
+  setImmediate(function() {
+    assert.equal(stack.length, 1);
+    assert(util.isString(stack[0]));
+    var msg = JSON.parse(stack[0]);
+    assert(msg["message"]);
+    assert.equal(msg["message"], 'test');
+    done();
+  });
+}
+
 describe('karl', function() {
   var stack = [];
 
@@ -28,28 +39,14 @@ describe('karl', function() {
   describe('.info()', function () {
     it('should send a message to stdout', function (done) {
       karl.info('test');
-      setImmediate(function() {
-        assert.equal(stack.length, 1);
-        assert(util.isString(stack[0]));
-        var msg = JSON.parse(stack[0]);
-        assert(msg["message"]);
-        assert.equal(msg["message"], 'test');
-        done();
-      });
+      checkStack(stack, done);
     });
   });
 
   describe('.debug()', function() {
     it('should send a message to stdout', function (done) {
       karl.debug('test');
-      setImmediate(function() {
-        assert.equal(stack.length, 1);
-        assert(util.isString(stack[0]));
-        var msg = JSON.parse(stack[0]);
-        assert(msg["message"]);
-        assert.equal(msg["message"], 'test');
-        done();
-      });
+      checkStack(stack, done);
     });
   });
 
