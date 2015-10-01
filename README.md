@@ -42,6 +42,10 @@ $ npm install karl --production
 ```
 for a production only installation (no tests, documentation, ...).
 
+## Supported Node Versions
+`Karl` supports `Node` versions 0.12 and later.  
+ To use `Karl` with `Node` version < 4.0, you must start `node` with the `--harmony` flag.
+
 ## Usage
 ``` js
   var karl = require('karl');
