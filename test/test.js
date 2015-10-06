@@ -86,6 +86,7 @@ describe('karl', function() {
         var msg = JSON.parse(stack[0]);
         assert(util.isObject(msg));
         assert(msg.hasOwnProperty("fileName"));
+        assert(msg.hasOwnProperty("filePath"));
         assert(msg.hasOwnProperty("lineNumber"));
         assert(msg.hasOwnProperty("functionName"));
         assert(!msg.fileName);
