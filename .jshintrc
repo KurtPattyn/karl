@@ -1,8 +1,7 @@
 {
   //ENVIRONMENT
   "node": true,
-
-  "esnext": true,
+  "esversion": 6,
 
   //ENFORCING OPTIONS
   //These options tell jshint to be more strict about the code.

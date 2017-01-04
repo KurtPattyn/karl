@@ -68,7 +68,7 @@
   "validateAlignedFunctionParameters": true,
   "validateIndentation": {
     "value": 2,
-    "allExcept": ["comments", "emptylines"]
+    "allExcept": ["comments", "emptyLines"]
   },
   "validateLineBreaks": "LF",
   "validateNewlineAfterArrayElements": {
