@@ -3,8 +3,6 @@
   "node": true,
   "esversion": 6,
 
-  "esnext": true,
-
   //ENFORCING OPTIONS
   //These options tell jshint to be more strict about the code.
   "multistr": true, //deprecated, and will be removed in future version of jshint (use jscs instead)
