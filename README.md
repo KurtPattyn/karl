@@ -43,13 +43,14 @@ $ npm install karl --production
 for a production only installation (no tests, documentation, ...).
 
 ## Supported Node Versions
-`Karl` supports `Node` versions 0.12 and later.  
- To use `Karl` with `Node` version < 4.0, you must start `node` with the `--harmony` flag.
+`Karl` supports `Node` versions 4.7.1 and later.  
+It is only tested on LTS versions.
 
 ## Usage
 ``` js
   var karl = require('karl');
 
+  karl.trace("Are you spying on me?");
   karl.debug("Everything looks fine.");
   karl.info("Need some more info huh?");
   karl.warn("Didn't you forget something?");
@@ -60,6 +61,7 @@ for a production only installation (no tests, documentation, ...).
 Output:
 
 ```sh
+{"timestamp":"2015-08-02T18:02:39.456Z","level":"TRACE","hostName":"<hidden>","process":{"name":"karltest","pid":26693},"message":"Are you spying on me?","fileName":"karltest.js","lineNumber":40,"functionName":"<anonymous>"}
 {"timestamp":"2015-08-02T18:02:39.456Z","level":"DEBUG","hostName":"<hidden>","process":{"name":"karltest","pid":26693},"message":"Everything looks fine.","fileName":"karltest.js","lineNumber":41,"functionName":"<anonymous>"}
 {"timestamp":"2015-08-02T18:02:39.456Z","level":"INFO","hostName":"<hidden>","process":{"name":"karltest","pid":26693},"message":"Need some more info huh?","fileName":"karltest.js","lineNumber":42,"functionName":"<anonymous>"}
 {"timestamp":"2015-08-02T18:02:39.456Z","level":"WARN","hostName":"<hidden>","process":{"name":"karltest","pid":26693},"message":"Didn't you forget something?","fileName":"karltest.js","lineNumber":43,"functionName":"<anonymous>"}
@@ -133,8 +135,9 @@ karl.setOptions({ includeLocationInformation: true });  //turns location informa
 Location information is included by default and must be disabled explicitly.
 
 ## Console Redirection
-By default Karl redirects all `console` output to its own logger.
-As a consequence, all console messages are decorated with location information and a timestamp.
+By default Karl redirects all `console` output to its own logger.  
+As a consequence, all console messages are decorated with location information and a timestamp.  
+Karl also adds a debug() and trace() method to the console.
 
 `console.info("Hi there!")` is exactly the same as `karl.info("Hi there!")`.
 The `console.log()` method is redirected to `karl.info()`.
@@ -146,7 +149,7 @@ karl.setOptions({ redirectConsole: false });
 ```
 
 ## UncaughtException
-Karl catches any uncaught exception (see [Event 'uncaughtException'](https://nodejs.org/api/process.html#process_event_uncaughtexception)).
+Karl catches any uncaught exception (see [Event 'uncaughtException'](https://nodejs.org/api/process.html#process_event_uncaughtexception)).  
 When such an exception occurs, Karl logs a fatal log message (including stack trace) and then gracefully shuts down the process by emitting a `SIGINT` signal.
 
 
