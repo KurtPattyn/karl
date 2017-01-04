@@ -1,6 +1,7 @@
 {
   //ENVIRONMENT
   "node": true,
+  "esversion": 6,
 
   "esnext": true,
 
