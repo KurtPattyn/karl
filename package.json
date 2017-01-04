@@ -21,13 +21,13 @@
     "node >=0.12"
   ],
   "devDependencies": {
-    "bunyan": "^1.4.0",
-    "istanbul": "^0.3.17",
-    "jscs": "^2.0.0",
-    "jsdoc": "^3.3.2",
-    "jshint": "^2.8.0",
-    "minami": "^1.1.0",
-    "mocha": "^2.2.5"
+    "bunyan": "1.*",
+    "istanbul": "^0.4.5",
+    "jscs": "3.*",
+    "jsdoc": "3.*",
+    "jshint": "2.*",
+    "minami": "1.*",
+    "mocha": "3.*"
   },
   "keywords": [
     "logging",
