@@ -5,7 +5,7 @@ languages:
   PHP: false
   Python: false
 exclude_paths:
-  - "benchmarks",
+  - "benchmarks"
   - "test"
   - "docs"
   - "node_modules"
