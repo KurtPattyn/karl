@@ -134,4 +134,18 @@ describe('karl', function() {
       });
     });
   });
+
+  describe('.options.enrich', function() {
+    it('should correctly call a given enrich function', function(done) {
+      karl.setOptions({ json: true, enrich: (msg) => msg.x = 12345 });
+      karl.info('this should be enriched');
+      setImmediate(function() {
+        assert.equal(stack.length, 1);
+        assert(util.isString(stack[0]));
+        const msg = JSON.parse(stack[0]);
+        assert.strictEqual(msg.x, 12345);
+        done();
+      });
+    });
+  });
 });

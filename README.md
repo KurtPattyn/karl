@@ -148,6 +148,31 @@ To disable this redirection, set the `redirectConsole` option to `false`.
 karl.setOptions({ redirectConsole: false });
 ```
 
+## Log Enrichtment
+Applications can add extra information to a message at the moment it is logged.  
+One example usage is adding request information to the log messages in an express application.
+
+```javascript
+karl.setOption({
+  enrich: addRequestInformation,
+  json:   true
+});
+
+function addRequestInformation(msg) {
+  //fetch request information from somewhere, e.g. by using continuation local storage
+  const request = context.get("request");
+  msg.headers = request.headers;
+}
+
+app.use((req, res, next) => {
+  console.log("Entering application");
+});
+```
+
+```sh
+{"timestamp":"2015-08-02T18:02:39.456Z","level":"DEBUG","hostName":"<hidden>","process":{"name":"karltest","pid":26693},"message":"Entering application","fileName":"karltest.js","lineNumber":41,"functionName":"<anonymous>", "headers": { "host": "localhost", ... }}
+```
+
 ## UncaughtException
 Karl catches any uncaught exception (see [Event 'uncaughtException'](https://nodejs.org/api/process.html#process_event_uncaughtexception)).  
 When such an exception occurs, Karl logs a fatal log message (including stack trace) and then gracefully shuts down the process by emitting a `SIGINT` signal.
